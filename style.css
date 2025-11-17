@@ -1,0 +1,287 @@
+/* Variáveis globais para facilitar alterações no tema */
+:root {
+    --main-color: #d3ad7f; /* Cor principal do site */
+    --black: #13131a; /* Cor preta personalizada */
+    --bg: #010103; /* Cor de fundo padrão */
+    --border: 0.1rem solid rgba(255,255,255,0.3); /* Bordas padrão com transparência */
+    font-size: 10px; /* Tamanho base da fonte para o site */
+}
+
+/* Reset básico e configurações globais */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    outline: none; /* Remove contorno ao focar elementos */
+    border: none; /* Remove bordas padrão */
+    text-decoration: none; /* Remove sublinhado de links */
+    text-transform: capitalize; /* Primeira letra maiúscula em palavras */
+    transition: 0.2s linear; /* Suaviza transições de estilos */
+    font-family: "Roboto", sans-serif; /* Define fonte padrão */
+}
+
+/* Estilização do corpo da página */
+body {
+    background: linear-gradient(135deg, #010103 0%, #12121a 100%); /* Fundo com gradiente */
+    color: white; /* Cor do texto */
+    min-height: 100vh; /* Altura mínima de toda a tela */
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* Seções da página */
+section {
+    padding: 3rem 2rem; /* Espaçamento interno */
+    margin: 0 auto; /* Centraliza a seção */
+    max-width: 1200px; /* Largura máxima */
+}
+
+/* Cabeçalho fixo */
+.header {
+    position: fixed; /* Fixa no topo da tela */
+    top: 0; /* Topo da página */
+    left: 0;
+    right: 0;
+    z-index: 99; /* Mantém acima de outros elementos */
+    border-bottom: var(--border); /* Borda inferior */
+    background-color: var(--bg);
+}
+
+/* Layout interno do cabeçalho */
+.header section {
+    display: flex; /* Organiza os itens em linha */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    padding-top: 1.5rem; /* Espaçamento superior */
+    padding-bottom: 1.5rem; /* Espaçamento inferior */
+}
+
+/* Barra de navegação */
+.navbar {
+    position: absolute; /* Posicionamento relativo ao header */
+    left: 50%; /* Centraliza horizontalmente */
+    top: 40%; /* Ajusta verticalmente */
+    transform: translateX(-50%); /* Corrige centralização */
+    display: flex; /* Coloca os links em linha */
+    gap: 2rem; /* Espaço entre os links */
+}
+
+/* Links da navbar */
+.navbar a {
+    margin: 0.1rem;
+    font-size: 1.4rem; /* Tamanho do texto */
+    color: #fff; /* Cor branca */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.navbar a:hover {
+    color: var(--main-color); /* Muda a cor */
+    border-bottom: 0.1rem solid var(--main-color); /* Adiciona borda inferior */
+    padding-bottom: 0.5rem; /* Espaçamento da borda */
+    font-size: 2rem; /* Aumenta o tamanho do texto */
+}
+
+/* Ícones dentro do header */
+.icons img {
+    margin: 1rem; /* Espaçamento ao redor */
+    cursor: pointer; /* Cursor de clique */
+}
+
+/* Efeito ao passar o mouse sobre os ícones */
+.icons img:hover {
+    width: 35px; /* Aumenta tamanho */
+    height: 35px;
+}
+
+/* Logo da empresa/site */
+.logo img {
+    width: 70px; /* Define largura da logo */
+    height: auto; /* Mantém proporção */
+    margin-left: 100px; /* Espaço à esquerda */
+}
+
+.btn {
+    background: var(--main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+.home-container {
+    background: url("./img/home-img.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin-right: 30px;
+
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 6rem;
+}
+
+.content p {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 100;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+    
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.title span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+   font-size: 3rem;
+   color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+   
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: 0.1rem solid var(--main-color);
+    padding: 5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu .box-container .box img {
+    height: 10rem;
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter; 
+}
+
+.menu .box-container .box:hover {
+    background-color: #fff; 
+}
+
+.menu .box-container .box:hover>* {
+    color: var(--black);
+}
+
+.review .box-container .box {
+    border: var(--main-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 0.1rem solid var(--main-color);
+
+}
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem 0;
+    line-height: 1.8;
+    font-weight: lighter;
+}
+
+.review .box-container .box h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 1rem 0;
+}
+
+
+.review .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+    
+}
+
+.footer .share img {
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    
+}
+
+.footer .share img:hover {
+   
+    background-color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color); /* Adiciona borda inferior */
+    padding-bottom: 0.1rem; /* Espaçamento da borda */
+    
+}
+
