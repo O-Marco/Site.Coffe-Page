@@ -1,6 +1,6 @@
 # ☕ Dev Teste - Landing Page de Cafeteria
 
-Este projeto é uma **landing page** com tema de cafeteria, desenvolvida para treinar habilidades em **HTML5** e **CSS3**. Apresenta um layout moderno e responsivo, ideal para um site promocional ou portfólio.
+Este projeto é uma **landing page** com tema de cafeteria, Para treinar habilidades em **HTML5** e **CSS3**. Apresenta um layout moderno e responsivo, ideal para um site promocional ou portfólio.
 
 ## 🛠️ Tecnologias Utilizadas
 
